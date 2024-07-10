@@ -15,7 +15,11 @@ export default function About() {
             }}
         >
             <Grid item>
-                <Link href="#about" id="about" style={{ textDecoration: "none" }}>
+                <Link
+                    href="#about"
+                    id="about"
+                    style={{ textDecoration: "none" }}
+                >
                     <Typography variant="h3" fontFamily={"BADTYPE"}>
                         About me
                     </Typography>
@@ -32,9 +36,12 @@ export default function About() {
                     </span>
                     I am 21 years old and have{" "}
                     <span style={{ color: "#CBACF3", fontWeight: "bold" }}>
-                        2{" "}
+                        2 years of professional (commercial){" "}
                     </span>
-                    years of professional (commercial) development experience.
+                    development experience and{" "}
+                    <span style={{ color: "#CBACF3", fontWeight: "bold" }}>
+                        5 years of experience in IT.{" "}
+                    </span>
                     <br />
                     <br />
                     My passion for programming started at the age of{" "}
@@ -64,11 +71,16 @@ export default function About() {
                     field.
                 </Typography>
             </Grid>
-            <Grid item display={"flex"} justifyContent={"center"} alignItems={"center"}>
+            <Grid
+                item
+                display={"flex"}
+                justifyContent={"center"}
+                alignItems={"center"}
+            >
                 <img
                     src="/man.png"
                     alt="portfolio"
-                    width={'400rem'}
+                    width={"400rem"}
                     height={"auto"}
                 />
             </Grid>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { CssBaseline, Grid, ThemeProvider } from "@mui/material";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import globalTheme from "@/theme";
 import "./globals.css";
 import FullScreen from "@/layouts/Fullscreen";

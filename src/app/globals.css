@@ -1,6 +1,10 @@
 @font-face {
     font-family: BADTYPE;
-    src: url("/BADTYPE.ttf");
+    src: url("/BadType.ttf");
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 /* :root {
