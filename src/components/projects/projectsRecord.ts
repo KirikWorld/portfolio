@@ -19,7 +19,7 @@ export const projectsRecord: ProjectType[] = [
   },
   {
     title: "CTF KPK",
-    image: "CTF.png",
+    image: "ctf.png",
     repo: "https://github.com/KirikWorld/ctf-kpk",
     link: "https://ctf-kpk.ru/",
     technologies: ["React", "TypeScript", "Django", "Python", "PostgreSQL"],
@@ -56,7 +56,7 @@ export const projectsRecord: ProjectType[] = [
   },
   {
     title: "RMS App",
-    image: "RMS.png",
+    image: "rms.png",
     technologies: [
       "React",
       "MUI",

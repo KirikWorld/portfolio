@@ -113,6 +113,18 @@ export default function Header() {
                     </Link>
                   </MenuItem>
                 ))}
+                <MenuItem>
+                  <Button
+                    href="http://t.me/kiriknm"
+                    LinkComponent={Link}
+                    target="_blank"
+                    variant="outlined"
+                    startIcon={<Telegram />}
+                    sx={{ height: 30, textTransform: "none", color: globalTheme.palette.info.light }}
+                  >
+                    Collaborate?
+                  </Button>
+                </MenuItem>
               </Menu>
             </Box>
           )}
