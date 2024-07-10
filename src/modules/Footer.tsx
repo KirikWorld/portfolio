@@ -1,4 +1,4 @@
-import { Telegram } from "@mui/icons-material";
+import { GitHub, Telegram } from "@mui/icons-material";
 import { Box, Button, Grid, Link, Typography } from "@mui/material";
 
 export function Footer() {
@@ -39,7 +39,7 @@ export function Footer() {
             LinkComponent={Link}
             href={"http://github.com/KirikWorld"}
             target="_blank"
-            startIcon={<Telegram />}
+            startIcon={<GitHub />}
           >
             GitHub
           </Button>
