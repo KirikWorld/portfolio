@@ -2,7 +2,7 @@
 
 My bio page
 
-Developed by NextJS, React and MUI
+Developed with NextJS, React and MUI
 
 Run in dev mode - `npm run dev`
 
