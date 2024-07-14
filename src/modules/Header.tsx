@@ -66,7 +66,12 @@ export default function Header() {
                   target="_blank"
                   variant="outlined"
                   startIcon={<Telegram />}
-                  sx={{ height: 30, textTransform: "none", color: globalTheme.palette.info.light }}
+                  sx={{
+                    height: 30,
+                    textTransform: "none",
+                    color: globalTheme.palette.info.light,
+                    borderColor: globalTheme.palette.info.light
+                  }}
                 >
                   Collaborate?
                 </Button>
@@ -120,7 +125,12 @@ export default function Header() {
                     target="_blank"
                     variant="outlined"
                     startIcon={<Telegram />}
-                    sx={{ height: 30, textTransform: "none", color: globalTheme.palette.info.light }}
+                    sx={{
+                      height: 30,
+                      textTransform: "none",
+                      color: globalTheme.palette.info.light,
+                      borderColor: globalTheme.palette.info.light
+                    }}
                   >
                     Collaborate?
                   </Button>

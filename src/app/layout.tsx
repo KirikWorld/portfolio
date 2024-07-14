@@ -5,24 +5,28 @@ import "./globals.css";
 import FullScreen from "@/layouts/Fullscreen";
 
 export const metadata: Metadata = {
-    title: "Kurayami",
-    description: "Kurayami's Portfolio Page",
+  title: "Kurayami",
+  description: "Kurayami's Portfolio Page"
 };
 
 export default function RootLayout({
-    children,
+  children
 }: Readonly<{
-    children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-    return (
-        <html lang="en">
-            <link rel="preload" as="font" href="/BadType.ttf" />
-            <body>
-                <ThemeProvider theme={globalTheme}>
-                    <CssBaseline enableColorScheme />
-                    <FullScreen>{children}</FullScreen>
-                </ThemeProvider>
-            </body>
-        </html>
-    );
+  return (
+    <html lang="en">
+      <link rel="preload" as="font" href="/BadType.ttf" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+      <body>
+        <ThemeProvider theme={globalTheme}>
+          <CssBaseline enableColorScheme />
+          <FullScreen>{children}</FullScreen>
+        </ThemeProvider>
+      </body>
+    </html>
+  );
 }
