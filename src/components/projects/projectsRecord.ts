@@ -14,7 +14,7 @@ export const projectsRecord: ProjectType[] = [
     title: "Kurayami Portfolio",
     image: "intro.png",
     repo: "https://github.com/KirikWorld/portfolio",
-    link: "https://kurayami.ru/",
+    link: "https://portfolio.kurayami.ru/",
     technologies: ["Next.js", "TypeScript", "Framer Motion", "MUI", "React"],
     description: "This is my portfolio site"
   },
