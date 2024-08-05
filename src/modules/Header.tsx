@@ -5,11 +5,14 @@ import globalTheme from "@/theme";
 import { Box, Button, Grid, Link, Menu, MenuItem, Typography, useMediaQuery } from "@mui/material";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import { useState } from "react";
-import { Telegram } from "@mui/icons-material";
+import { Language, Telegram } from "@mui/icons-material";
+import getCookie from "../util/cookie";
 
 export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);
   const bigScreen = useMediaQuery("(min-width:750px)");
+
+  const [lang, setLang] = useState<"en" | "ru">((getCookie("lang") as "en" | "ru") || "en");
 
   return (
     <Box
@@ -61,7 +64,7 @@ export default function Header() {
               ))}
               <Grid item>
                 <Button
-                  href="http://t.me/kiriknm"
+                  href="http://t.me/kuleshov_k"
                   LinkComponent={Link}
                   target="_blank"
                   variant="outlined"
@@ -74,6 +77,22 @@ export default function Header() {
                   }}
                 >
                   Collaborate?
+                </Button>
+              </Grid>
+              <Grid item>
+                <Button
+                  variant="contained"
+                  startIcon={<Language />}
+                  onClick={() => {
+                    document.cookie = `lang=${lang === "en" ? "ru" : "en"}; path=/`;
+                    setLang(lang === "en" ? "ru" : "en");
+                    window.location.reload();
+                  }}
+                  sx={{
+                    height: 30
+                  }}
+                >
+                  {lang}
                 </Button>
               </Grid>
             </Grid>
@@ -120,7 +139,7 @@ export default function Header() {
                 ))}
                 <MenuItem>
                   <Button
-                    href="http://t.me/kiriknm"
+                    href="http://t.me/kuleshov_k"
                     LinkComponent={Link}
                     target="_blank"
                     variant="outlined"
@@ -133,6 +152,23 @@ export default function Header() {
                     }}
                   >
                     Collaborate?
+                  </Button>
+                </MenuItem>
+                <MenuItem>
+                  <Button
+                    variant="contained"
+                    onClick={() => {
+                      document.cookie = `lang=${lang === "en" ? "ru" : "en"}; path=/`;
+                      setLang(lang === "en" ? "ru" : "en");
+                      window.location.reload();
+                    }}
+                    startIcon={<Language />}
+                    sx={{
+                      height: 30,
+                      textTransform: "none"
+                    }}
+                  >
+                    RU
                   </Button>
                 </MenuItem>
               </Menu>

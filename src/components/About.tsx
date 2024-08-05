@@ -1,6 +1,9 @@
 import { Grid, Link, Typography } from "@mui/material";
+import useTranslate from "../hooks/useTranslate";
 
 export default function About() {
+  const t = useTranslate({ section: "about" });
+
   return (
     <Grid
       container
@@ -21,38 +24,25 @@ export default function About() {
           </Typography>
         </Link>
         <Typography my={2} lineHeight={1.8}>
-          Hello, my name is{" "}
+          {t("text1")}{" "}
           <span
             style={{
               color: "#CBACF3",
               fontWeight: "bold"
             }}
           >
-            Kirill and I am a fullstack web developer.{" "}
+            {t("text2")}{" "}
           </span>
-          I am 21 years old and have{" "}
-          <span style={{ color: "#CBACF3", fontWeight: "bold" }}>2 years of professional (commercial) </span>
-          development experience and{" "}
-          <span style={{ color: "#CBACF3", fontWeight: "bold" }}>5 years of experience in IT. </span>
+          {t("text3")} <span style={{ color: "#CBACF3", fontWeight: "bold" }}>{t("text4")}</span> {t("text5")}{" "}
+          <span style={{ color: "#CBACF3", fontWeight: "bold" }}>{t("text6")}</span>
           <br />
           <br />
-          My passion for programming started at the age of{" "}
-          <span style={{ color: "#CBACF3", fontWeight: "bold" }}>14. </span>
-          It all began in school when I got my first smartphone and started exploring ways to hack games for in-game
-          currency and other perks. My interest grew stronger when I decided to participate in a hackathon, where I won
-          a programming course on Java at Bauman University. This experience solidified my desire to pursue a career in
-          programming.
+          {t("text7")} <span style={{ color: "#CBACF3", fontWeight: "bold" }}>{t("text8")}</span> {t("text9")}{" "}
+          {t("text10")} {t("text11")} <br />
           <br />
+          {t("text12")} {t("text13")} <br />
           <br />
-          Upon entering university, I discovered web development courses and realized how much I enjoyed creating
-          projects that I could easily share with friends and family. This led me to enroll in a full-stack development
-          course.
-          <br />
-          <br />
-          Throughout my journey, I have been deeply fascinated by programming and IT technologies. I am constantly
-          learning and evolving, driven by a strong commitment to self-education. A significant portion of my knowledge
-          has been acquired through self-study, and I take pride in my continuous growth and development in this
-          ever-changing field.
+          {t("text14")} {t("text15")} {t("text16")}{" "}
         </Typography>
       </Grid>
       <Grid item display={"flex"} justifyContent={"center"} alignItems={"center"}>

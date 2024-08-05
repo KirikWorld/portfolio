@@ -28,7 +28,7 @@ export function Footer() {
           <Button
             variant="outlined"
             LinkComponent={Link}
-            href={"http://t.me/kiriknm"}
+            href={"http://t.me/kuleshov_k"}
             target="_blank"
             startIcon={<Telegram />}
           >
