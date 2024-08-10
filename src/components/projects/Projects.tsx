@@ -5,6 +5,7 @@ import { projectsRecord, ProjectType } from "./projectsRecord";
 import { ModalWrapper } from "../Modal";
 import { useState } from "react";
 import { Web } from "@mui/icons-material";
+import getCookie from "../../util/cookie";
 
 export function Projects() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -46,7 +47,7 @@ export function Projects() {
             variant="contained"
             LinkComponent={Link}
           >
-            Site
+            {getCookie("lang") === "ru" ? "Сайт" : "Website"}
           </Button>
         </Box>
       </ModalWrapper>

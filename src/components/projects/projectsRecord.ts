@@ -1,4 +1,5 @@
 import globalTheme from "../../theme";
+import getCookie from "../../util/cookie";
 
 export type ProjectType = {
   title: string;
@@ -16,7 +17,7 @@ export const projectsRecord: ProjectType[] = [
     repo: "https://github.com/KirikWorld/portfolio",
     link: "https://portfolio.kurayami.ru/",
     technologies: ["Next.js", "TypeScript", "Framer Motion", "MUI", "React"],
-    description: "This is my portfolio site"
+    description: getCookie("lang") === "ru" ? "Это мое портфолио" : "This is my portfolio site"
   },
   {
     title: "CTF KPK",
@@ -24,8 +25,12 @@ export const projectsRecord: ProjectType[] = [
     repo: "https://github.com/KirikWorld/ctf-kpk",
     link: "https://ctf-kpk.ru/",
     technologies: ["React", "TypeScript", "Django", "Python", "PostgreSQL"],
-    description: `<span style="color: ${globalTheme.palette.primary.main}">CTF</span> platform for college and university students. This project was created for educational purposes.<br/>
-      <span style="color: ${globalTheme.palette.primary.main}">CTF</span> - Capture The Flag competitive programming, where you can participate in programming competitions and earn points.`
+    description:
+      getCookie("lang") === "ru"
+        ? `<span style="color: ${globalTheme.palette.primary.main}">CTF</span> платформа для студентов колледжей и университетов. Этот проект был создан в образовательных целях.<br/>
+        <span style="color: ${globalTheme.palette.primary.main}">CTF</span> - Capture The Flag, соревновательное программирование, где вы можете участвовать в программных конкурсах и зарабатывать очки.`
+        : `<span style="color: ${globalTheme.palette.primary.main}">CTF</span> platform for college and university students. This project was created for educational purposes.<br/>
+        <span style="color: ${globalTheme.palette.primary.main}">CTF</span> - Capture The Flag competitive programming, where you can participate in programming competitions and earn points.`
   },
   {
     title: "Parsing Tool",
@@ -50,10 +55,16 @@ export const projectsRecord: ProjectType[] = [
       "Docker",
       "GitlabCI"
     ],
-    description: `<span style="color: ${globalTheme.palette.primary.main}">Cyberia Parsing Tool</span> platform where you can parse and convert CV to any format. <br/>
-    The program is designed to extract information from applicants' resume files. The program allows you to use artificial intelligence (AI) models to extract information from text or scanned resume files with any formatting. 
-    The program makes it possible to generate a new text file with a given text formatting template, filling it with information extracted from the resume.<br/>
-    <span style="color: ${globalTheme.palette.primary.main}">I am one of the authors of the patent!</span>`
+    description:
+      getCookie("lang") === "ru"
+        ? `<span style="color: ${globalTheme.palette.primary.main}">Cyberia Parsing Tool</span> платформа, где вы можете парсить и конвертировать резюме в любой формат.<br/>
+        Программа предназначена для извлечения информации из файлов резюме соискателей. Она позволяет использовать модели искусственного интеллекта (ИИ) для извлечения информации из текста или сканированных файлов резюме с любым форматированием.
+        Программа позволяет создавать новый текстовый файл с заданным шаблоном форматирования текста, заполняя его информацией, извлеченной из резюме.<br/>
+        <span style="color: ${globalTheme.palette.primary.main}">Я являюсь одним из авторов патента!</span>`
+        : `<span style="color: ${globalTheme.palette.primary.main}">Cyberia Parsing Tool</span> platform where you can parse and convert CV to any format. <br/>
+        The program is designed to extract information from applicants' resume files. The program allows you to use artificial intelligence (AI) models to extract information from text or scanned resume files with any formatting. 
+        The program makes it possible to generate a new text file with a given text formatting template, filling it with information extracted from the resume.<br/>
+        <span style="color: ${globalTheme.palette.primary.main}">I am one of the authors of the patent!</span>`
   },
   {
     title: "RMS App",
@@ -76,13 +87,18 @@ export const projectsRecord: ProjectType[] = [
       "Docker",
       "GitHubCI"
     ],
-    description: `<span style="color: ${globalTheme.palette.primary.main}">RMS</span> app allow to create an applications with with already implemented complex datatypes (created with table flat links), add users to manage database, assign roles and more!`
+    description:
+      getCookie("lang") === "ru"
+        ? `<span style="color: ${globalTheme.palette.primary.main}">RMS</span> приложение позволяет создавать приложения с уже реализованными сложными типами данных (созданными с использованием таблиц), добавлять пользователей для управления базой данных, назначать роли и многое другое!`
+        : `<span style="color: ${globalTheme.palette.primary.main}">RMS</span> app allows to create applications with already implemented complex data types (created with table flat links), add users to manage database, assign roles, and more!`
   },
   {
     title: "Semantic Splitter",
     image: "hugging-face.jpg",
     technologies: ["Python", "Transformers", "PyTorch", "Pandas", "Numpy", "Scikit-learn", "NLTK"],
-    description: `
-    <span style="color: ${globalTheme.palette.primary.main}">Semantic Splitter</span> is a tool for splitting text into semantic units (by paragraphs or sentences).`
+    description:
+      getCookie("lang") === "ru"
+        ? `<span style="color: ${globalTheme.palette.primary.main}">Semantic Splitter</span> это инструмент для разделения текста на семантические единицы (по абзацам или предложениям).`
+        : `<span style="color: ${globalTheme.palette.primary.main}">Semantic Splitter</span> is a tool for splitting text into semantic units (by paragraphs or sentences).`
   }
 ];

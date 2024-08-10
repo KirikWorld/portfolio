@@ -3,6 +3,7 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import globalTheme from "@/theme";
 import "./globals.css";
 import FullScreen from "@/layouts/Fullscreen";
+import I18nProvider from "../modules/i18n";
 
 export const metadata: Metadata = {
   title: "Kurayami",
@@ -25,6 +26,7 @@ export default function RootLayout({
         <ThemeProvider theme={globalTheme}>
           <CssBaseline enableColorScheme />
           <FullScreen>{children}</FullScreen>
+          <I18nProvider />
         </ThemeProvider>
       </body>
     </html>

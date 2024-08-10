@@ -6,13 +6,16 @@ import { Box, Button, Grid, Link, Menu, MenuItem, Typography, useMediaQuery } fr
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import { useState } from "react";
 import { Language, Telegram } from "@mui/icons-material";
-import getCookie from "../util/cookie";
+import getCookie from "@/util/cookie";
+import useTranslate from "@/hooks/useClientTranslate";
 
 export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);
   const bigScreen = useMediaQuery("(min-width:750px)");
 
   const [lang, setLang] = useState<"en" | "ru">((getCookie("lang") as "en" | "ru") || "en");
+
+  const t = useTranslate({ section: "routes" });
 
   return (
     <Box
@@ -57,7 +60,7 @@ export default function Header() {
                         }
                       }}
                     >
-                      {route.title}
+                      {t(route.title)}
                     </Typography>
                   </Link>
                 </Grid>
@@ -76,7 +79,7 @@ export default function Header() {
                     borderColor: globalTheme.palette.info.light
                   }}
                 >
-                  Collaborate?
+                  {t("Collaborate")}?
                 </Button>
               </Grid>
               <Grid item>
@@ -133,7 +136,7 @@ export default function Header() {
                         height: "100%"
                       }}
                     >
-                      {route.title}
+                      {t(route.title)}
                     </Link>
                   </MenuItem>
                 ))}
@@ -151,7 +154,7 @@ export default function Header() {
                       borderColor: globalTheme.palette.info.light
                     }}
                   >
-                    Collaborate?
+                    {t("Collaborate")}?
                   </Button>
                 </MenuItem>
                 <MenuItem>
@@ -168,7 +171,7 @@ export default function Header() {
                       textTransform: "none"
                     }}
                   >
-                    RU
+                    {lang.toUpperCase()}
                   </Button>
                 </MenuItem>
               </Menu>

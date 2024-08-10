@@ -32,7 +32,7 @@ export function Footer() {
             target="_blank"
             startIcon={<Telegram />}
           >
-            Collaborate
+            Telegram
           </Button>
           <Button
             variant="outlined"
