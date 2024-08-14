@@ -24,7 +24,7 @@ export const projectsRecord: ProjectType[] = [
     image: "ai.png",
     repo: "https://github.com/KirikWorld/simple-ai-chat",
     link: "https://ai.kurayami.ru/",
-    technologies: ["Next.js", "TypeScript", "ShadCN", "React", "Tailwind"],
+    technologies: ["Next.js", "TypeScript", "ShadCN", "React", "Tailwind", "Ollama", "PyTorch"],
     description: getCookie("lang") === "ru" ? "Это простый чат бот без контекста" : "This is simple chat bot without context"
   },
   {
