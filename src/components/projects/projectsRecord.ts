@@ -20,6 +20,14 @@ export const projectsRecord: ProjectType[] = [
     description: getCookie("lang") === "ru" ? "Это мое портфолио" : "This is my portfolio site"
   },
   {
+    title: "AI simple chat",
+    image: "ai.png",
+    repo: "https://github.com/KirikWorld/simple-ai-chat",
+    link: "https://ai.kurayami.ru/",
+    technologies: ["Next.js", "TypeScript", "ShadCN", "React", "Tailwind"],
+    description: getCookie("lang") === "ru" ? "Это простый чат бот без контекста" : "This is simple chat bot without context"
+  },
+  {
     title: "CTF KPK",
     image: "ctf.png",
     repo: "https://github.com/KirikWorld/ctf-kpk",
